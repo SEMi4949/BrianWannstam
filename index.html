@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
@@ -9,36 +10,27 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            text-align: center;
+            background: #cfcfcf;
+            text-align: left;
             padding: 50px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #0056b3;
         }
     </style>
 </head>
-<body>
-<img src="Resources/Screenshot 2026-03-10 100525.png" class="full-width">
-    <h1>Programmer</h1>
-    <p>Portfolio</p>
 
-    <button onclick="sayHello()">Click Me</button>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Portfolio</a>
+    </div>
+    <h1>Brian Wannstam</h1>
+    <h2>Programmer</h2>
+    <p>Portfolio</p>
+    <div>
+
+        <button class="button" onclick="sayHello()">TEST</button>
+    </div>
 
     <script>
         function sayHello() {
@@ -46,5 +38,16 @@
         }
     </script>
 
+
+    <div class="container">
+        <p>This is a paragraph on the page.</p>
+    </div>
+    <button class="button" onclick="sayHello()">Click Me</button>
+
+    <img src="Resources/Screenshot 2026-03-10 100525.png" class="full-width">
+
+
+
 </body>
+
 </html>

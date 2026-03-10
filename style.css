@@ -1,4 +1,61 @@
+/* Page background and font */
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Header style */
+h1 {
+  color: #333;
+  text-align: left;
+  padding: 0px;
+}
+
+/* Paragraph text */
+p {
+  color: #555;
+  line-height: 1.6;
+  padding: 10px 20px;
+}
+
+/* Full-width image */
 .full-width {
   width: 100%;
   height: auto;
+}
+
+/* Centered container */
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* Button style */
+.button {
+  background: linear-gradient(180deg, #4facfe, #0966d1);  color: white;
+  padding: 10px 20px;
+  border: #f4f4f4;
+  border-radius: 15px;
+  transition: background 3.5s;
+}
+
+.button:hover {
+  background: linear-gradient(180deg, #0966d1, #4facfe);
+}
+
+/* Simple navigation bar */
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
 }
