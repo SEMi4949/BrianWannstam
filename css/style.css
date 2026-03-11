@@ -43,7 +43,7 @@ main section {
 
 footer {
     background-color: #333;
-    color: white;
+    color: rgb(155, 155, 155);
     text-align: center;
     padding: 1em 0;
     /* position: fixed; */
@@ -62,6 +62,7 @@ footer {
 
 .scaled-logo {
     width: 10%;
+    min-width: 100px;
     height: auto;
 }
 
