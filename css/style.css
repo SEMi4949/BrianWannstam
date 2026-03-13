@@ -25,9 +25,10 @@ nav ul {
 
 nav ul li {
     display: inline;
-            border-image: url("../Resources/BoxBorder.png") 8/4px repeat;
-
-    margin-right: 15px;
+            border-image: url("../Resources/BoxBorderB.png") 4/4px repeat;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+            padding: 4px 4px;
+    margin-right: 8px;
 }
 
 nav ul li a {
@@ -41,9 +42,23 @@ nav ul li a:hover {
 
 main section {
     padding: 1em;
-        border-image: url("../Resources/BoxBorder.png") 8/4px repeat;
+    margin-bottom: 10px;
+        border-image: url("../Resources/InvBoxBorderW.png") 6/4px repeat;
+        background-color: #edf8f8;
     border-bottom: 1px solid #ddd;
 }
+
+
+
+
+/* Dark theme */
+main section.dark-theme {
+    background-color: #1d1d1d;
+            border-image: url("../Resources/InvBoxBorderB.png") 6/4px repeat;
+
+    color: white;
+}
+
 
 footer {
     background-color: #333;
@@ -60,8 +75,17 @@ footer {
     min-width: 10px;
     max-width: 800px;
     background-color: #ddd;
+            border-image: url("../Resources/BoxBorder.png") 8/4px repeat;
+
     margin: auto;
     padding: 20px;
+}
+
+.midpart.dark-theme {
+    background-color: #333;
+                border-image: url("../Resources/BoxBorderB.png") 8/4px repeat;
+
+    color: white;
 }
 
 .scaled-logo {
@@ -92,4 +116,52 @@ footer {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Cube styles */
+.cube-container {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    perspective: 600px;
+}
+
+.cube {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+    animation: rotateCube 5s infinite linear;
+}
+
+.cube .face {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-image: url('../Resources/AshesOfEphtael_thumbnail.png');
+        background-size: cover;
+
+    border: 1px solid #1b1b1b;
+}
+
+.cube .front { transform: translateZ(100px); }
+.cube .back { transform: rotateY(180deg) translateZ(100px); }
+.cube .right { transform: rotateY(90deg) translateZ(100px); }
+.cube .left { transform: rotateY(-90deg) translateZ(100px); }
+.cube .top { transform: rotateX(90deg) translateZ(100px); }
+.cube .bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+@keyframes rotateCube {
+    from { transform: rotateX(0deg) rotateY(0deg); }
+    to { transform: rotateX(360deg) rotateY(360deg); }
 }

@@ -10,3 +10,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+document.getElementById('theme-toggle').addEventListener('click', function() 
+{
+   document.querySelectorAll('.midpart section').forEach(s => s.classList.toggle('dark-theme'));
+      document.querySelectorAll('.midpart').forEach(s => s.classList.toggle('dark-theme'));
+    // targetSection.classList.toggle('light-theme');
+});
