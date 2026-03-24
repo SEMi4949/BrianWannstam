@@ -124,7 +124,37 @@ footer {
 
 
 
+.project-container {
+    
+    display: flex;
+    flex-wrap: wrap; /* Allows projects to wrap onto the next line if there isn't enough space */
+    gap: 20px; /* Space between each project box */
+    /* align-items: center; */
+}
 
+.project-image-link {
+     margin-top: 10px;
+        display: inline-block;
+            border-image: url("../Resources/BoxBorderB.png") 4/4px repeat;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+            padding: 8px 8px;
+                background-color: #333;
+    
+    flex: 1 1 calc(33.3% - 20px); /* Adjust the width of each project box (e.g., 33.3% for three projects per row) */
+    max-width: auto; /* Optional: Sets a maximum width for each project box */
+}
+
+.project-image-link img {
+    min-width: 226px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-image-link h2 {
+    text-align: center;
+    margin-top: 10px;
+}
 
 
 
@@ -167,5 +197,5 @@ footer {
 
 @keyframes rotateCube {
     from { transform: rotateX(0deg) rotateY(0deg); }
-    to { transform: rotateX(360deg) rotateY(360deg); }
+    to { transform: rotateX(0deg) rotateY(360deg); }
 }
