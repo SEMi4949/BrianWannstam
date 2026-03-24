@@ -43,8 +43,10 @@ nav ul li a:hover {
 main section {
     padding: 1em;
     margin-bottom: 10px;
-        border-image: url("../Resources/InvBoxBorderW.png") 6/4px repeat;
-        background-color: #edf8f8;
+    background-color: #1d1d1d;
+            border-image: url("../Resources/InvBoxBorderB.png") 6/4px repeat;
+
+    color: white;
     border-bottom: 1px solid #ddd;
 }
 
@@ -52,11 +54,9 @@ main section {
 
 
 /* Dark theme */
-main section.dark-theme {
-    background-color: #1d1d1d;
-            border-image: url("../Resources/InvBoxBorderB.png") 6/4px repeat;
-
-    color: white;
+main section.light-theme {
+        border-image: url("../Resources/InvBoxBorderW.png") 6/4px repeat;
+        background-color: #edf8f8;
 }
 
 
@@ -74,18 +74,22 @@ footer {
 .midpart {
     min-width: 10px;
     max-width: 800px;
-    background-color: #ddd;
-            border-image: url("../Resources/BoxBorder.png") 8/4px repeat;
-
-    margin: auto;
-    padding: 20px;
-}
-
-.midpart.dark-theme {
     background-color: #333;
                 border-image: url("../Resources/BoxBorderB.png") 8/4px repeat;
 
     color: white;
+    margin: auto;
+    padding: 20px;
+}
+
+
+
+
+.midpart.light-theme {
+    background-color: #ddd;
+            border-image: url("../Resources/BoxBorder.png") 8/4px repeat;
+
+    color: black;
 }
 
 .scaled-logo {
