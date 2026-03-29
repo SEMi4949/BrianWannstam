@@ -36,7 +36,7 @@
                             <p>My plan was to create a multi-platform render engine with support for PBL lighting and
                                 shadows. <br><br> I tested on both AMD and NVIDIA GPUs on different Operating
                                 systems I encountered a lot of inconsistencies, and I learned a lot about how different
-                                drivers treat the same commands. </p>
+                                drivers treat instructions. </p>
                         </div>
                         <div class="project-image-link">
                             <img src="Resources/Intro.png" alt="Albedo Pass" class="responsive-image">
@@ -184,10 +184,93 @@
                     </p>
                     <h2>Debuging the engine</h2>
                     <hr>
+                    <div class="project-container">
+                        <div class="project-nobg">
+                            <p>
+                                Thanks to having built the engine with a GPU that gave no errors I had plenty of small
+                                and large buggs that I needed to fix. It also did not help that my main graphics debug
+                                tool RenderDoc broke due to the errors, when taking a capture of the program all the
+                                textures are nulled when stepping through frame events even though it reports.
+
+
+                            </p>
+                        </div>
+                        <div class="project-image-link">
+                            <img src="Resources/AllGood.webp" alt="All Good" class="responsive-image">
+                        </div>
+                    </div>
                     <p>
-                        
+                        This lead to a rahter interesting development cycle I would see what needed fixing by
+                        trying to compile and launch my engine on linux and the fixing the errors on the windows
+                        computer.
                     </p>
                 </div>
+
+                <h2>The dreaded sponza model</h2>
+                <hr>
+                <div class="project-container">
+                    <div class="project-image-link">
+                        <img src="Resources/Sponza.png" alt="PBL WIP" class="responsive-image">
+                    </div>
+                    <div class="project-nobg">
+                        <p>
+                            Ahh the almost 1GB ASCII FBX model that has tested my engine's limits by being so
+                            unimaginably
+                            borken that it gets it's own chapter. <br><br> It comes as a FBX format that blender can't
+                            read that breaks the normals when converted with the official ASCII converter. <br> It's
+                            missing vertex tangents wich are reqired for PBL calculations.
+                        </p>
+                    </div>
+                </div>
+                <p>
+                    This model has made me make changes to so many parts of the engine to simply load it correctly with
+                    all of it's normals and textures intact together with its 28 materials and 401 elements. <br><br> In
+                    short this model is perfection if you are makeing a engine that is relient and durable.
+                </p>
+                <h2>PBL</h2>
+                <hr>
+                <div class="project-container">
+                    <div class="project-nobg">
+                        <p>
+                            Adding PBL would have been a lot simpler if I would have used a model that had all of it's
+                            values exported. The sponza model that I use (proivided by intel) is missing tangents wich
+                            is
+                            crucial for the shader functions. <br><br> I had a lot of trouble when importing the sponza
+                            model due to it missing tangent I have had to try and generate tangents from normal and UVs
+                            <br><br>
+                            I have done PBL before and I intend to reuse the shaders to speed up the process.
+                        </p>
+                    </div>
+                    <div class="project-image-link">
+                        <img src="Resources/Latest.png" alt="PBL WIP" class="responsive-image">
+                    </div>
+                </div>
+
+                </p>
+                <h2>Conclusion</h2>
+                <hr>
+                <div class="project-container">
+                    <div class="project-nobg">
+                        <p>
+                            I learned a lot! <br>Building this engine has tought me about multi platform inconsistencies
+                            between GPU vendors and how to write OS interchangeable code. <br><br> The engine currently
+                            needs reworked somewhat to be in a more usefull state but it still has a decent foundation
+                            to start building a game. <br><br> If I would do something different it would be to chose a
+                            different GPU to do my main development on to be able to catch buggs in an early stage.
+                        </p>
+                    </div>
+                    <div class="project-image-link">
+                        <img src="Resources/CrossPlatform.png" alt="PBL WIP" class="responsive-image">
+                    </div>
+                </div>
+                <p>
+                    Working on different GPUs that behave differently has by far been one of the more challanging things
+                    that I have done in this project. However my hard work payed of and I now have a multi-platform
+                    graphics engine that I can keep building upon in the future. <br><br>
+
+                    I have yet to add shadows and some more PBL still needs to be added despite that I view this as a success!
+                </p>
+        </div>
         </div>
         </section>
     </main>
