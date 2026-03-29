@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about-me">About Me</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="index.html#past-experience">Past Experience</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="midpart">
+            <section id="portfolio">
+
+                <h1>MULTI-PLATFORM VULKAN ENGINE</h1>
+                <div class="project">
+
+                    <img src="Resources/CrossPlatform.png" alt="Albedo Pass" class="responsive-image">
+                    <h2>Intro</h2>
+                    <hr>
+                    <div class="project-container">
+                        <div class="project-nobg">
+                            <p>My plan was to create a multi-platform render engine with support for PBL lighting and
+                                shadows. <br><br> I tested on both AMD and NVIDIA GPUs on different Operating
+                                systems I encountered a lot of inconsistencies, and I learned a lot about how different
+                                drivers treat the same commands. </p>
+                        </div>
+                        <div class="project-image-link">
+                            <img src="Resources/Intro.png" alt="Albedo Pass" class="responsive-image">
+
+                        </div>
+                    </div>
+
+                    <!-- <img src="../Resources/Intro.png" alt="Project 1 Image"> -->
+
+                    <h2>Setup</h2>
+                    <hr>
+                    <p>My development environment was consisted of two computers for testing my program. I mainly
+                        developed the engine on Machine 1 and tested compatability on Machine 2.</p>
+
+                    <!-- Specs -->
+                    <div class="foldable">
+                        <div class="foldable-header">Specifications</div>
+                        <div class="foldable-content">
+                            <div class="project-container">
+                                <div class="project-image-link">
+                                    <h3>Machine 1</h3>
+                                    <hr>
+                                    <p>
+                                        <u>OS: </u><br>
+                                        WINDOWS 10 <br>
+                                        <u>CPU: </u><br>
+                                        Intel<br>
+                                        <u>GPU: </u><br>
+                                        Nvidia 4060<br><br>
+                                    </p>
+                                </div>
+                                <div class="project-image-link">
+                                    <h3>Machine 2</h3>
+                                    <hr>
+
+
+                                    <p>
+                                        <u>OS: </u><br>
+                                        Linux x86_64<br>
+                                        WINDOWS 10<br>
+                                        <u>CPU: </u><br>
+                                        AMD Ryzen 9 7950X3D<br>
+                                        <u>GPU: </u><br>
+                                        AMD Radeon GRE 7900
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Logos -->
+                    <div class="foldable">
+                        <div class="foldable-header">Tools</div>
+                        <div class="foldable-content">
+                            <div>
+
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/CMake_logo.svg/960px-CMake_logo.svg.png?_=20240825160757"
+                                    alt="CMake" class="small-scaled-logo">
+                                <img src="https://git-scm.com/images/logos/downloads/Git-Icon-White.png" alt="Git"
+                                    class="small-scaled-logo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/archive/f/fe/20210504155209%21Vulkan_logo.svg/120px-Vulkan_logo.svg.png"
+                                    alt="Vulkan" class="scaled-logo">
+                                <img src="https://svg.saasfly.io/library/neovim.svg" alt="Neovim"
+                                    class="small-scaled-logo">
+                                <img src="//upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Visual_Studio_Icon_2022.svg/250px-Visual_Studio_Icon_2022.svg.png"
+                                    alt="MSVC" class="small-scaled-logo">
+                                <img src="https://images.seeklogo.com/logo-png/38/1/visual-studio-code-logo-png_seeklogo-384323.png"
+                                    alt="Visual_Studio_Icon_2022" class="small-scaled-logo">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Logos -->
+                    <div class="foldable">
+                        <div class="foldable-header">External Libraries</div>
+                        <div class="foldable-content">
+                            <a href="https://www.glfw.org/">
+                                <h4>GLFW</h4>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <p>
+                        I had very litle problems setting up all the tool and dependencies
+                        and could begin implementing my engine early. I followed a guide
+                        on how to setup and render with vulkan. The guide was at first
+                        quite decent and easy to follow along to and I was seing good
+                        proggress.
+                    </p>
+
+                    <div class="project-container">
+                        <div class="project-image-link">
+                            <img src="Resources/Screenshot 2026-03-10 120735.png" alt="Shaded model"
+                                class="responsive-image">
+
+                        </div>
+                        <div class="project-nobg">
+                            <p>
+                                I kept following the tutorial and eventualy got a cube to render and eventualy one of my
+                                own models. Add some fake directional lighting and it's starting to look good. <br><br>
+                                I keep following the guide and added frames in flight and made it possible to have more
+                                than one model at once. <br><br> Once i got to adding textures the guide started to have
+                                more and more errors and the guide did not align with their provided refrence code.
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        I keept following the tutorial to get textures added simply to get a hang of how to manage
+                        textures.
+
+                        The structure that the guide was giving me was not scalable and there was no sign of it getting
+                        any better. I tried adding support for meshes with multpile materials, it was then I decided to
+                        abandon the guide completely due not having a section dedicated to it.<br><br>
+                    </p>
+
+                    <h2>Testing the engine</h2>
+                    <hr>
+                    <div class="project-container">
+                        <div class="project-nobg">
+                            <p>
+                                I tested my program on mainly 2 completely different computers, one fitted with a 4060
+                                and intel processor running windows 10 only.<br><br> The other computer is fitted with a
+                                AMD GPU and AMD CPU with dual boot for both Linux and windows 10. <br><br> I developed
+                                the engine on the windows computer and pushed to git afterwards and tested the program
+                                on the linux computer.
+                            </p>
+                        </div>
+                        <div class="project-image-link">
+                            <img src="Resources/VKAlbedo.png" alt="Albedo Pass" class="responsive-image">
+                        </div>
+                    </div>
+                    <p>
+                        The testing mostly fine independent on the OS. Sadly it was not as sooth when testing cross GPU
+                        vendor. Thanks to developing on a NVidia GPU I had created functionalities that only worked on
+                        NVidia GPUs. The NVidia drivers also "helped" to mouch by letting the program run with errors
+                        while not giving any logs or indication that things were wrong. <br><br> The way the engine
+                        swithes textures worked fine on NVidia but completely broke on AMD and moving my camera around
+                        crashed on AMD due to it actualy listening to my commands unlike NVidia that gave me a false
+                        impression that everything worked as it should. It did not, I was locking buffers and then
+                        writing to them wich was fine on NVidia that somehow let me ignore my lock. On AMD the program
+                        would realize that it was writing to locked data and simply null it and throw warnings and
+                        errors.
+                    </p>
+                    <h2>Debuging the engine</h2>
+                    <hr>
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Brian Wannstam. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
