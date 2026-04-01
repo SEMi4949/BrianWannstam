@@ -184,6 +184,8 @@ footer {
 
 
 .project-image-link img {
+    text-decoration: none;
+
     min-width: 226px;
     width: 100%;
     height: auto;
@@ -200,12 +202,28 @@ footer {
     align-self: left;
     text-align: center;
     border: none;
+    text-decoration: none;
     border-radius: 115px;
     cursor: pointer;
 }
 
-.project-image-link i {
+.project-image-link:hover {
+        box-shadow: 0 4px 18px rgba(0, 255, 98, 0.2);
 
+    animation: hoverPlane 0.4s forwards;
+    perspective: 600px;
+}
+
+.project-image-link:hover {
+
+    animation: hoverPlane 0.4s forwards;
+    
+    perspective: 600px;
+
+}
+
+.project-image-link a {
+    text-decoration: none;
     font-size: 15px;
 margin-top: 10px;
     color: rgb(133, 134, 127);
@@ -214,7 +232,6 @@ margin-top: 10px;
     border: none;
 
 }
-
 .round-button {
     padding: 10px 20px;
     font-size: 16px;
@@ -234,11 +251,12 @@ margin-top: 10px;
     width: 150px;
     height: 150px;
     margin: auto;
+    margin-bottom: 75px;
     perspective: 600px;
 }
 
 .cube {
-    padding-top: 50px;
+    padding-top: 0px;
     padding-bottom: 50px;
     position: relative;
     width: inherit;
@@ -251,7 +269,7 @@ margin-top: 10px;
     position: absolute;
     width: inherit;
     height: inherit;
-    background-image: url('../Resources/AshesOfEphtael_thumbnail.png');
+    background-image: url('../Resources/tenor.gif');
     background-size: cover;
 
     border: 1px solid #1b1b1b;
@@ -290,6 +308,22 @@ margin-top: 10px;
         transform: rotateX(-20deg) rotateY(360deg);
     }
 }
+
+
+@keyframes hoverPlane {
+    from {
+        transform: translateY(0px); 
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+    }
+
+    to {
+        transform: translate(0px, -3px);
+        box-shadow: 0 4px 18px rgba(0, 255, 98, 0.3);
+
+    }
+}
+
+
 
 .dropdown {
     position: relative;
