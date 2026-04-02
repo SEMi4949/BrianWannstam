@@ -20,15 +20,15 @@ header {
 nav ul {
     list-style-type: none;
 
-    padding: 0;
 }
-
+    
 nav ul li {
-    display: inline;
+    display: inline-block;
     border-image: url("../Resources/BoxBorderB.png") 4/4px repeat;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
-    padding: 4px 4px;
+    padding: 8px 6px;
     margin-right: 8px;
+    margin-top: 6px;
 }
 
 nav ul li a {
@@ -45,15 +45,12 @@ main section {
     margin-bottom: 10px;
     background-color: #1d1d1d;
     border-image: url("../Resources/InvBoxBorderB.png") 6/4px repeat;
-
     color: white;
     border-bottom: 1px solid #ddd;
 }
 
 
 
-
-/* Dark theme */
 main section.light-theme {
     border-image: url("../Resources/InvBoxBorderW.png") 6/4px repeat;
     background-color: #edf8f8;
@@ -65,7 +62,6 @@ footer {
     color: rgb(155, 155, 155);
     text-align: center;
     padding: 1em 0;
-    /* position: fixed; */
     bottom: 0;
     width: 100%;
 }
@@ -160,6 +156,8 @@ footer {
     padding: 8px 8px;
     border-image: url("../Resources/BoxBorderB.png") 4/4px repeat;
     background-color: #333;
+    animation: notHoverPlane 0.4s forwards;
+
 
     flex: 1 1 calc(33.3% - 20px);
     /* Adjust the width of each project box (e.g., 33.3% for three projects per row) */
@@ -214,13 +212,13 @@ footer {
     perspective: 600px;
 }
 
-.project-image-link:hover {
+/* .project-image-link:hover {
 
     animation: hoverPlane 0.4s forwards;
     
     perspective: 600px;
 
-}
+} */
 
 .project-image-link a {
     text-decoration: none;
@@ -323,6 +321,18 @@ margin-top: 10px;
     }
 }
 
+@keyframes notHoverPlane {
+    from {
+        transform: translate(0px, -3px);
+        box-shadow: 0 4px 18px rgba(0, 255, 98, 0.3);
+
+    }
+    to {
+        transform: translateY(0px); 
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+    }
+
+}
 
 
 .dropdown {
