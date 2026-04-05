@@ -405,3 +405,12 @@ footer {
 .foldable.active .foldable-header::after {
     content: " ▲";
 }
+
+.email-link {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}

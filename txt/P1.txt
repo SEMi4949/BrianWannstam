@@ -1,0 +1,30 @@
+Scripts:
+Squid Attack
+Level Select Meny
+Enemy Activation By Distance (Ångvältarna aktiveras när spelaren kommer nära)
+CinematicCameraControl (kameran zoomar in på spelaren i början av bannan)
+Updaterade fuel script så att den använder en bild istället för slider
+Play audio on button click (spelar ljud när man clickar på knap i meny)
+Rotate Obsticle (roterar ett object på vald axel)
+
+
+Bug/fix:
+Sorterade andra bannans Hierarchy (Desert) samt optimisering
+Fixat: level transition. Tog spelaren till fel level efter man klarat bannan
+Fixat colliders på broarna i sista bannan.
+
+Shaders:
+Shader till plantor.
+Shader till squid textur.
+
+
+Prefabs:
+Enemy Squid
+Level Select
+Level transition camera
+
+
+Annat:
+Loggor i startup
+Hjälpt LD, SG, SA med p4v samt unity
+En stor del av min tid har gåt åt att hälpa andra med p4v och unity

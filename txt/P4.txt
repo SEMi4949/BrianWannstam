@@ -1,0 +1,73 @@
+Jag var med i följande taskforces:
+  Levels,
+  animation + VFX,
+  Metrics
+
+Levels (Features) TF
+Användes för att bestämma HUR levlarna fick byggas upp samt vilka features som skulle finnas med, dvs hur stora objekt fick
+vara, vilka objekt som gick att rotera på, hur enemies och pussel skulle fungera. Var och en av oss från var disciplin ansvarade för
+att meddela våra discipliner om vad vi kom överens om. Detta fungerade väl och vi kunde alla snabbt och effectivt komma igång
+med att arbeta på vårat spel.
+
+Anim + VFX TF
+Vi hade ETT möte väldigt tidigt i spelprojektet där vi kom överens om att använda partikelsystemet som jag skapade i P3 och
+bygga om det för att fungera i 3D samt göra partikelsystemets inställningar från json, samt göra en lathund för hur systemet
+fungerar och vad alla inställningar gör så att alla skulle kunna skapa samt modifiera partikelsystemet. Partikelsystemet
+medförde även support för animerade texturer vilket uppskattades av animatörerna.  Detta blev dock aldrig använt av någon
+annan diciplin och knappt av någon annan proggramerare än jag själv vilket innebar att jag spenderade mycket tid på onödiga
+saker, istället kunde ha spenderat tiden på annat och jag hade haft mer tid till att polisha andra delar av projektet.
+
+Metrics TF
+Ett möte, vi analyserade och skrev ner mått på spelaren, spelarens storlek på skärmen, fienders storlek relativt till spelaren,
+spelarens hastighet på olika handlingar, längd på tid och dodge samt tilestorlek. Därefter skickades detta ut i ett dokument samt i
+ett textmeddelande på discord så alla skulle kunna ta del av metricsen. Därefter fick vi lite feedback från andra gruppmedlemmar
+och justerade metrics och därefter arbetade vi i metricsen till slutet av projektet.
+Taskforces användes främst under projektplaneringen, därefter arbetade vi agilt och ägandeskap flyttades till lämplig
+gruppmedlem.
+
+
+
+Vi underscopeade väl i vår projektplanering vilket gynnade oss då vi i slutet fick tid över att polisha existerande features samt
+lägga till fler VFX effekter. Vi var dock inte duktiga på att uppdatera planeringen under projektets gång, det som skrevs på
+projektplaneringen förblev detsamma genom hela projektet trots att vi hade skrotat vissa saker stod det kvar i planeringen,
+som tur var så hade ingen satt sig ner och arbetat med dessa saker, ingen tid blev slösad av detta. Jag hade främst ett
+Uppgiftsområde i planeringen, VFX / partiklar, så jag kände inte att jag behövde kolla om jag följde planeringen då planeringen
+enbart nämnde att partiklar skulle existera.
+
+Jag arbetade dock med saker som inte stod på planeringen men som behövde fixas. Till exempel så fick vi problem med alpha
+rendering som inte alls stod med i planeringen på något sätt men eftersom det absolut var något som skulle fungera i slutet av
+projektet så fick jag ta tag i det. Detta lede till att vi hade ett spel som renderade alpha korrekt tillsammans med andra modeller samt
+icke transperanta modeller.
+
+Gruppen "glömde bort" att projektplaneringen fanns då vi skrev den och sedan inte kolla och uppdatera den förrän vi närmade oss i
+slutet av spelprojektet. Tack vare att alla visste vad de skulle skapa samt arbeta med så var detta inte något större problem och
+hade minimal påverkan på projektet.
+
+En stor fördel med en produktplanering är att det ger alla en tydlig syn på hur resultatet man strävar efter, vilket underlättar kan
+samarbetet samt minimera att folk arbetar på separata delar som inte bidrar till slutprodukten. Det finns en risk att
+produktplaneringen blir något "helig" då man inte vågar göra några ändringar på planeringen i efterhand. Att skapa en egen
+produktplanering ger ett tydligt mål som gör att man lättare kan fokusera på sin arbetsuppgift.
+
+
+Rendering & Alpha
+Jag arbetade väldigt mycket med det som inte syndes, bokstavligen. Vi hade problem med alpha då vi försökte använda
+fuskskuggor så skars bakomliggande objekt bort oavsett om de låg framför eller bakom "alpha objektet".
+
+Detta hade med vilken ordning saker och ting renderades i och för att fixat detta så gjorde jag ett försök att sortera alla spelobjekt
+med avstånd ifrån kameran för att försöka fixa renderingen. Detta gav ett halvbra resultat förutom att ibland så blev sorteringen fel
+och problemet kom tillbaka i vissa fal. Dessutom förstördes prestanda då denna sortering gjordes för alla objekt var frame vilket
+gjorde "Debug" ospelbar.
+
+Jag löste detta genom att implementera en dålig view culling som hanterade alla objekt som en kvadrat på skärmen med samma
+storlek. Det innebär att storleken på kvadraten måsta vara större än det största objektet även för de mindre modellerna i spelet,
+trots allt så känna vi 15 fps (från 10 till 25) i debug vilket var värt det.
+Alpha renderingen lösta jag slutligen genom att tvinga SG att tagga alla fake skuggor/ljus och sedan renderar jag de sist i Tge.
+Detta gjorde min sortering helt meningslös så den blev även borttagen.
+
+Partikelsystem
+Anpassningen för att kunna ladda in partikelsystem från Json var ett ganska stort slöseri med tid då ingen hade kände att de hade
+tid för att kolla på dokumentationen samt implementera partiklesystem så det blev främst jag som skapade och justerade
+partikelsystemen. Dessutom led Json inläsningen bara till mer extra arbete. Det var även snabbare och lättare att koda in
+inställningarna för partikelsystemen direkt i .cpp filerna vilket också skrev över inställningarna som satts i Json filerna. Trots det så
+är jag nöjd med resultatet och jag fick lära mig använda och hantera Json inläsning vilket jag inte hade gjort förut. Att skriva
+dokumentationen gjorde även att jag hittade fel i min kod som jag sedan kunde åtgärda.

@@ -1,0 +1,61 @@
+
+
+Builda Spelet
+
+Vi har haft stora problem med att få en fungerande build på skolan plattor då vi stött på problem efter problem.
+
+
+Först kunde vi bygga till plattorna men inte installera våran .apk på skolan plattor då vi hade byggt till fel version av android.
+
+
+//Bra att veta för er utbildare om någon elev stöter på detta i framtiden!
+
+Därefter när vi försökte bygga till rätt version av android så kraschade kompileringen med Error: Gradle Build Failed.
+
+Detta beror på att Unity försöker uppdatera till en ny version av android SDK så saknar programmet skriv rättigheter på filen:
+
+C:\Program Files\Unity\Hub\Editor\2022.3.40f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK
+
+och därav misslyckas builden.
+
+
+LÖSNING:
+
+
+Ändra på filens rättigheter och se till att allt kan läsa och skriva i SDK filen så bör problemet bli åtgärdat
+
+
+Vi hade problem med att vi inte kunde installera vårat spel på plattan
+
+Error: App not installed
+
+Detta löstes genom att bygga till rätt version för plattan och slå på ARMv7
+
+
+
+Prestanda Optimering
+
+Jag har arbetat mycket med optimera prestanda för att kunna uppnå godtagbar prestanda på skolans plattor.
+
+Till en början var prestandan på plattan inte godtagbar och jag fick därav börja optimera genom att sätta objekt som static.
+
+Detta hjälpte förmodligen en del, men eftersom att vi plötsligt inte kunde bygga och testa på plattan så blev det svårt att jämföra och se prestandan.
+
+Jag försökte skapa en virtuell maskin med samma specs som plattan för att kunna testa utan prestanda utan plattan, detta gick sådär i med att jag inte kunde ge min min virtuella maskin en gpu och fick använda integrerade grafik istället. Detta gjorde att prestandan i min VM var sämre än prestandan på plattan vilket gick att utgå från eftersom att om vi fick 30 fps i VMn skulle vi definitivt få 30 fps på plattan.
+
+Det var även då jag märkte att modellerna som vi hade fåt av SP inte var optimerade då de hade alldeles för många verticis och fick därav bli ändrade (ca 14000 tris för ett handtag och ca 9000 för ett halvklot, båda modellerna användes upprepade gånger i var level).
+
+
+Jag stängde även av ljus i alla scener och gjorde om alla material till unlit.
+
+Till sist har jag stängt av bakgrunden på alla kameror så att de bara har en svart bakgrund för att inte behöva rendera bakgrunden.
+
+
+Roterande Objektet
+
+
+Jag har skapat scriptet för det roterande objektet och det fungerar på mobil plattform med touch controller.
+
+Handtaget är ger feedback till spelaren genom färg och ljud och eftersom att det är svårare att fin justera på mobila enheter så snappar objektet till 90 grader.
+
+Scriptet har support för rotation och snapping i alla axlar och det är möjligt att separera handtaget och objektet som ska roteras.

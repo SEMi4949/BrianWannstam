@@ -1,0 +1,25 @@
+Förutom deferred rendering blev inte mycket refaktoriserat i motorn. Det förekom mestadels buggfixar i grafikmotorn som ställde till med problem i olika scenarion. För det mesta var det bara utbyggnad på befintliga system. Vi ändrade såklart även på hur världen läses in från att vara hårdkodat till att vara Json inläst från level-filer som skapades av levelexportern.
+
+
+
+På tal om levelexportern, den fick sig en liten refaktorisering då den korrigerar transformations matriserna från Unreal Engine till att vara korrekta i vår motor utan att behöva beräkna om de medan de läses in. Detta snabbar även på inladdningen av banor något då de inte måste konvertera alla matriser i runtime.
+
+
+
+I början av projektet så skapade jag tillsammans med Linus Rodhammar en State Machines som användes i resten av projektet, därav samarbetade vi mycket med SA för att bygga ett system som hade funktionalitet för allt de önskar använda.
+
+Utöver det så har vi kommunicerat väl och tillsammans diskuterat olika lösningar på problem och önskemål.
+
+Jag och Linus Rodhammar utvecklade även verktyg för att underlätta skapandet av State Machines då det blir ganska stökigt att manuellt modifiera allt genom en json fil. Utefter att vi skapade State Machines behövde vi även ett sätt att testas samt debugga dem så vi utvecklade verktyg för att visa all relevant information om States samt förmågan att sätta States och testa så att animationer/transitions såg rätt ut utan att prog behövde hjälpa till.
+
+
+
+Jag har tagit lärdom av att bygga verktyg kräver inte bara god kommunikation utan också att man kommer och sätter sig ner med användaren för att se vad som bör ändras för att kunna åtgärda. Jag ändrade ett debugg-verktyg eftersom jag hade sett problem med det efter att ha observerat användaren. I detta debugg-verkyg behövde man skriva precis rätt annars fungerade inget vilket led till att verktyget var väldigt störigt att använda. Detta löstes genom att göra om alla val till knappar som var mycket lättare att använda.
+
+
+
+Arbetsmängden var ok men om jag hade blivit sjuk eller påkörd av en buss så hade det blivit ganska krisigt då jag hade arbetat ensam på bossen samt blev koden lite magisk på vissa ställen. koden blev komplicerad på vissa ställen; att flytta på bossens huvud efter spelaren blev otäckt att titta på då den konverterar bossens animations-matriser som hämtas med "magiska" indexer som konverteras till transforms som sedan parentar runt de för att därefter rotera transformerna och hämta de globala transformationsmatriserna och sicka tillbaka de i animationslistan.
+
+
+
+I fortsättning kommer jag se till att jag har en ersättare ifall jag skulle bort bli.
