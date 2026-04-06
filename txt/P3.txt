@@ -1,0 +1,27 @@
+
+
+I began working on the player as well as a prototype version of the collision system, which was intended only for testing and quickly gathering metrics. This task was later delegated to another programmer who took over player movement and the collision systems.
+
+After that, I started working on the particle system, but communication broke down. When I asked how the rendering worked or how to correctly render objects in the game world, no one knew how it functioned. I assumed that if I simply changed the position of the transform (a member variable in all game objects), the position of my sprite would also move (which was not the case). The transform variable was almost completely useless, as it was often not connected to any logic at all. Even though all objects in the game have their own Transform, we do not use spatial logic at all, which misled me even further when trying to figure out how object rendering worked.
+
+After spending about half a week trying to understand how our rendering worked and attempting to build a rendering system, another programmer solved the rendering, and we then collaborated to get the particles rendering correctly.
+
+Once rendering started working, I continued to iteratively develop the particle system throughout almost the entire project, adding functionality based on the needs and requests of other disciplines. I was also responsible for creating all particle textures according to SG’s requirements. Additionally, I manually implemented all particle systems in every game object that required particles, since we did not have a component system.
+
+Svante and I also put our heads together to implement animated particles, which can be seen on the leaves in the first level.
+
+We received feedback that it was difficult to tell whether bosses were vulnerable or not, and when or if they were taking damage. I solved this by making the boss flash in different colors at different stages.
+
+Finally, I was responsible for converting all PNG files to DDS, which I solved using a simple bash command:
+
+```
+find . -type f -name "*.png" -exec sh -c 'convert "$0" "${0%.png}.dds"' {} \;
+```
+
+* `[ find . -type f ]` searches for files starting from the current directory
+* `[ -name "*.png" ]` finds all files ending with .png
+* `[ -exec sh -c 'convert "$0" "${0%.png}.dds"' {} \; ]` runs `convert` on all PNGs and outputs, for example, `example.dds`
+
+The command uses ImageMagick to convert PNGs to DDS. Read more here:
+[https://imagemagick.org/](https://imagemagick.org/)
+

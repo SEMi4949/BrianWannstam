@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Brian Wannstam: Royal Order</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body style="background-image: url('../Resources/Thumbnail_RoyalDelivery.png');">
     <header>
         <nav>
@@ -21,21 +23,102 @@
     <main>
         <div class="midpart">
             <section id="portfolio">
-                <h1>Royal Delivery</h1>
+                <h1>Royal Order</h1>
                 <div class="project">
                     <div class="video-container">
-                        <iframe width="1391" height="782" src="https://www.youtube.com/embed/rHG0sNObVjU" title="TGA24 - Malmö - Game Project #3 - A Royal Order" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe width="1391" height="782" src="https://www.youtube.com/embed/rHG0sNObVjU"
+                            title="TGA24 - Malmö - Game Project #3 - A Royal Order" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
-                    <h2>Intro</h2>
+                    <br>
+                    <div class="project-container">
+                        <div class="project-nobg">
+                            <p>
+                                DESC
+                            </p>
+                        </div>
+                        <div class="project-image">
+                            <h3>Quick info</h3>
+                            <hr>
+                            <p>
+                                <u>Engine: </u><br>
+                                In house engine <br>
+
+                                <u>Focus: </u><br>
+                            <div class="tag-container">
+                                <span class="tag-pill">Particles</span>
+                                <span class="tag-pill">Tools/Utilities</span>
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <h2>Particles</h2>
                     <hr>
                     <div class="project-container">
                         <div class="project-nobg">
-                            <p>REPLACE ME</p>
+                            <p>
+                                I started out working on the player as well as a prototype version of the collision
+                                system,
+                                which was intended only for testing and quickly gathering metrics. This task was later
+                                delegated to another programmer who took over player movement and the collision systems.
+                                <br><br>
+
+
+                                After spending some time trying to understand how our rendering worked and
+                                attempting to build a particle system, another programmer solved the rendering, and we
+                                then collaborated to get the particles rendering correctly.
+                            </p>
                         </div>
                         <div class="project-image">
-                            <img src="Resources/Intro.png" alt="Albedo Pass" class="responsive-image">
+                            <img src="Resources/particlesP3.png" alt="Albedo Pass" class="responsive-image">
+                            <i>Will update to gif</i>
                         </div>
                     </div>
+                    <p>
+                        Once rendering started working, I continued to iteratively develop the particle system
+                        throughout almost the entire project, adding functionality based on the needs and
+                        requests of other disciplines. I was also responsible for creating all particle textures
+                        according to our artists requirements. Additionally, I implemented all particle
+                        systems in all game object that required particles. <br><br>
+
+                        Svante and I also put our heads together to implement animated particles, which can be
+                        seen on the leaves in the first level. <br><br>
+
+                        We received feedback that it was difficult to tell whether bosses were vulnerable or
+                        not, and when or if they were taking damage. I solved this by making the boss flash in
+                        different colors at different stages.
+                    </p>
+
+
+                    <h2>PNG → DDS</h2>
+                    <hr>
+                    <p>
+                        I was responsible for converting all PNG files to DDS, which I solved using a simple command:
+                        <br><br>
+
+                        <span class="code-containter">find . -type f -name "*.png" -exec sh -c 'convert "$0"
+                            "${0%.png}.dds"' {} \;</span><br><br> 
+                            Explaination: <br><br>
+
+                        <span class="code-containter">find . -type f</span><br><br>
+                        searches for files starting from the current directory<br><br>
+
+
+                        <span class="code-containter">-name "*.png"</span><br><br>
+                        finds all files ending with .png <br><br>
+
+
+
+                        <span class="code-containter">-exec sh -c 'convert "$0" "${0%.png}.dds"' {} \;</span> <br><br>
+                        runs `convert` on all PNGs and outputs, for example, `example.dds`<br><br>
+
+
+                        This helped us convert 300+ PNGs to DDS in a matter of seconds saving us alot of time from manualy converting all images. 
+                    </p>
             </section>
         </div>
     </main>
@@ -44,4 +127,5 @@
     </footer>
     <script src="js/script.js"></script>
 </body>
+
 </html>

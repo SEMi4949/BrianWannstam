@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Brian Wannstam: Spite</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -33,52 +33,117 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
-                    <p>As Cinder, crusader of the Torch-Bearers, venture into the corrupted swamp, Epthael.
-                        Blaze a path through the foul creatures of the swamp to reclaim it from Pythos' grasp, as you,
-                        and your faith, grow stronger.</p>
 
+                    <br>
+                    <div class="project-container">
+                        <div class="project-nobg">
+                            <i>"As Cinder, crusader of the Torch-Bearers, venture into the corrupted swamp, Epthael.
+                                Blaze a path through the foul creatures of the swamp to reclaim it from Pythos' grasp,
+                                as you,
+                                and your faith, grow stronger."</i>
+                        </div>
+                        <div class="project-image">
+                            <h3>Quick info</h3>
+                            <hr>
+                            <p>
+                                <u>Engine: </u><br>
+                                LAMP ENGINE (Own made)<br>
+                                <br>
+                                <u>Focus: </u><br>
+                            <div class="tag-container">
+                                <span class="tag-pill">Animation</span>
+                                <span class="tag-pill">Tools/Utilities</span>
+                                <span class="tag-pill">Inverse kinematics</span>
+                                <span class="tag-pill">Gameplay</span>
+                            </div>
+                            </p>
+                        </div>
+                    </div>
                     <h2>Contributions</h2>
-                    <p>
-                    <p> *I worked on the animation system and animation state machine </p>
-                    <p> *I created debug tools to debug animations in runtime</p>
-                    <p> *Added support for blended animations as well as blending between frames </p>
-                    <p> *I developed the final boss of the game creating all logic and combat </p>
-                    <p> *Basic inverse kinematics tailored for the boss to be able to stare at the player </p>
-                    <h3>
+                    <hr>
+                    <p>• I worked on the animation system and animation state machine</p>
+                    <p>• I created debug tools to debug animations in runtime</p>
+                    <p>• Added support for blended animations as well as blending between frames</p>
+                    <p>• I developed the final boss of the game creating all logic and combat</p>
+                    <p>• Basic inverse kinematics tailored for the boss to be able to stare at the player</p>
+
+                    <h2>
                         Animation System and State Machine
-                    </h3>
-                    <h2>Intro</h2>
+                    </h2>
+                    <hr>
+                    <p>
+                        At the beginning of the project, I worked together with Linus Rodhammar to create a State
+                        Machine that was used throughout the rest of the project. Because of this, we collaborated
+                        closely with our animators to build a system that had functionality for everything they wanted
+                        to use.
+                        <br><br>
+
+                        In addition, we worked together with our animators and discussed different solutions to problems
+                        and requests.<br><br>
+
+
+
+                    </p>
+                    <h2>Json Maker</h2>
+                    <hr>
+                    <div class="project-container">
+                        <div class="project-image">
+                            <img src="Resources/Screenshot 2026-03-10 100525.png" alt="Animation Debugger"
+                                class="responsive-image">
+                        </div>
+                        <div class="project-nobg">
+                            <p>Linus Rodhammar and I also developed tools to simplify the creation of State Machines,
+                                since it
+                                becomes quite messy to manually modify everything through a JSON file. As we developed
+                                the State
+                                Machines, we also needed a way to test and debug them, so we created tools to display
+                                all
+                                relevant information about states, as well as the ability to set states and test them to
+                                ensure
+                                that animations and transitions looked correct without needing help from programmers.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+                    <h2>Animation Debugger</h2>
                     <hr>
                     <div class="project-container">
                         <div class="project-nobg">
-                            <p>My plan was to create a multi-platform render engine with support for PBL lighting and
-                                shadows. <br><br> I tested on both AMD and NVIDIA GPUs on different Operating
-                                systems I encountered a lot of inconsistencies, and I learned a lot about how different
-                                drivers treat instructions. </p>
+                            <p>I created a debug tool for animations and states using ImGui, It has been a very useful
+                                tool to find bugs and narrowing down from where animation errors come from. <br><br> It
+                                allows me
+                                to force push conditions and animations to test transitions and blending in a controled
+                                environment.</p>
                         </div>
                         <div class="project-image">
-                            <img src="Resources/Intro.png" alt="Albedo Pass" class="responsive-image">
+                            <img src="Resources/AnimationDebugInfo.gif" alt="Animation Debugger"
+                                class="responsive-image">
                         </div>
                     </div>
-                    <h3>Animations</h3>
                     <p>
-                        I worked on creating the animation system and animation state machine handling.
-
-                        
-
-
-                        The system is data driven from a json file containing states with animation and transition info. <br>
-                        for example : <br>
-                        * Animation File Name 
-                        * Transitions and conditions
-                        
-                        
+                        I learned that building tools requires not only good communication but also sitting down
+                        with the user to understand what needs to be changed in order to fix issues. I modified a
+                        debugging tool after observing problems while watching a user interact with it. <br><br>
+                        In the first draft of the debugger you had to type everything exactly right or else nothing
+                        would work, which made it very frustrating to use. This was resolved by converting all options
+                        into buttons, making it much easier to use.
                     </p>
-                    <h3>Animation Debugger</h3>
-                    <img src="Resources/AnimationDebugInfo.gif" alt="Animation Debugging Tool Screenshot"
-                        class="responsive-image">
-                    <p>I created a debug tool for animations and states using ImGui, It has been a very useful tool to
-                        find bugs and narrowing down from where animation errors come from.</p>
+                </div>
+
+                <h2>Boss enemy</h2>
+                <hr>
+                <div class="project-container">
+                    <div class="project-nobg">
+                        <p>I created all functionalities for the boss such as stages, attacks, inverse kinematics for
+                            looking at the player, implementing decals and water rising. </p>
+
+                    </div>
+                    <div class="project-image">
+                        <img src="Resources/Boss.png" alt="boss portrait" class="responsive-image">
+                    </div>
                 </div>
             </section>
     </main>

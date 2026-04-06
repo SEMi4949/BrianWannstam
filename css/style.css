@@ -6,6 +6,7 @@ body {
     padding: 0;
     background-position: center;
     background-attachment: fixed;
+        background-color: #333;
 }
 
 header {
@@ -175,6 +176,7 @@ footer {
     padding: 8px 8px;
     flex: 1 1 calc(33.3% - 20px);
     max-width: auto;
+        min-width: 226px;
 }
 
 
@@ -413,4 +415,29 @@ footer {
 
 .email-link:hover {
   text-decoration: underline;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.tag-pill {
+  padding: 0.45rem 0.6rem;
+  border-radius: 60px;
+  font-size: 0.75rem;
+  background: linear-gradient(#31803e, #2b3b32);
+  border: 1px solid #31803e;
+  color: var(--tag-text);
+}
+
+.code-containter {
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  background: #1a1a1a;
+  border: 1px solid #6b6b6b;
+  color: var(--tag-text);
 }

@@ -71,3 +71,48 @@ partikelsystemen. Dessutom led Json inläsningen bara till mer extra arbete. Det
 inställningarna för partikelsystemen direkt i .cpp filerna vilket också skrev över inställningarna som satts i Json filerna. Trots det så
 är jag nöjd med resultatet och jag fick lära mig använda och hantera Json inläsning vilket jag inte hade gjort förut. Att skriva
 dokumentationen gjorde även att jag hittade fel i min kod som jag sedan kunde åtgärda.
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::......::::
+
+
+
+---
+
+**Levels (Features) TF**
+Was used to determine HOW the levels would be structured and which features would be included—i.e., how large objects could be, which objects could be rotated, and how enemies and puzzles would function. Each of us from our respective disciplines was responsible for informing our teams about what we had agreed upon. This worked well, and we were all able to quickly and effectively get started working on our game.
+
+**Anim + VFX TF**
+We had ONE meeting very early in the game project where we agreed to use the particle system I created in P3 and rebuild it to work in 3D. We also decided to configure the particle system via JSON and create a guide explaining how the system works and what all the settings do, so that everyone could create and modify particle systems. The system also supported animated textures, which the animators appreciated. However, this was never really used by any other discipline, and barely by any other programmer besides myself. This meant I spent a lot of time on unnecessary things—time that could have been spent elsewhere, giving me more time to polish other parts of the project.
+
+**Metrics TF**
+We had one meeting where we analyzed and documented measurements such as the player’s size, how large the player appears on screen, enemy size relative to the player, player speed during different actions, duration of jumps and dodges, and tile size. This was then shared in a document and via a Discord message so everyone could access the metrics. We received some feedback from other team members, adjusted the metrics accordingly, and then worked with them until the end of the project.
+Task forces were mainly used during project planning; after that, we worked agilely and ownership shifted to appropriate team members.
+
+---
+
+We somewhat underscoped during our project planning, which benefited us since we had extra time at the end to polish existing features and add more VFX effects. However, we were not good at updating the plan during the project. What was written in the planning remained unchanged throughout, even though some features were scrapped—they still remained in the plan. Fortunately, no one spent time working on those, so no time was wasted. I mainly had one responsibility in the plan—VFX/particles—so I didn’t feel the need to check whether I was following the plan, since it only stated that particles should exist.
+
+I did, however, work on things that weren’t in the plan but needed fixing. For example, we encountered problems with alpha rendering, which wasn’t mentioned in the plan at all. Since it was essential for the final product, I took responsibility for it. This led to us having a game that rendered alpha correctly together with other models and non-transparent objects.
+
+The group “forgot” about the project plan after writing it and didn’t revisit or update it until we were nearing the end of the project. Since everyone knew what they were supposed to create and work on, this wasn’t a major issue and had minimal impact on the project.
+
+A major advantage of product planning is that it gives everyone a clear vision of the intended result, which facilitates collaboration and minimizes the risk of people working on separate parts that don’t contribute to the final product. There is a risk that the plan becomes “sacred,” making people hesitant to change it afterward. Creating your own product plan provides a clear goal, making it easier to focus on your tasks.
+
+---
+
+**Rendering & Alpha**
+I worked a lot on things that weren’t visible—literally. We had issues with alpha rendering: when using fake shadows, background objects were cut off regardless of whether they were in front of or behind the alpha object.
+
+This was related to render order. To fix it, I attempted to sort all game objects based on their distance from the camera. This gave a somewhat decent result, except that the sorting sometimes failed and the issue reappeared in certain cases. It also hurt performance, since sorting was done every frame for all objects, making Debug mode unplayable.
+
+I solved this by implementing a crude view culling system that treated all objects as equally sized squares on the screen. This meant the square size had to be larger than the largest object, even for smaller models. Despite that, we gained 15 FPS (from 10 to 25) in Debug, which made it worthwhile.
+I ultimately solved alpha rendering by letting our game artist to tag all drop-shadows/lights and rendering them last in TGE. This made my sorting solution completely unnecessary, so it was removed.
+
+---
+
+**Particle System**
+Adapting the system to load particle systems from JSON turned out to be a significant waste of time, as no one felt they had time to read the documentation or implement particle systems. As a result, I was mostly the one creating and adjusting them. The JSON loading also added extra work. It was faster and easier to hardcode the particle system settings directly in the `.cpp` files, which also overrode the JSON settings.
+
+Despite this, I’m happy with the result. I learned how to use and handle JSON loading, which I hadn’t done before. Writing the documentation also helped me discover bugs in my code, which I was then able to fix.

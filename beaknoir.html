@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body style="background-image: url('../Resources/Beak_Noir_Thumbnail.jpg');">
     <header>
         <nav>
             <ul>
@@ -23,7 +23,7 @@
 
     <main>
         <div class="midpart">
-             <section id="beak">
+            <section id="beak">
                 <h1>Beak noir</h1>
                 <div class="project">
                     <div class="video-container">
@@ -32,14 +32,96 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
-                    <p>You are Detective Redbeak, searching for your companion kidnapped by snake gangsters. Explore and
-                        fight your way through an abandoned, noir-inspired steampunk island</p>
+                    <div class="project-container">
+                        <div class="project-nobg">
+                            <i>
+                                "You are Detective Redbeak, searching for your companion kidnapped by snake gangsters.
+                                Explore and
+                                fight your way through an abandoned, noir-inspired steampunk island"
+                            </i>
+                        </div>
+                        <div class="project-image">
+                            <h3>Quick info</h3>
+                            <hr>
+                            <p>
+                                <u>Engine: </u><br>
+                                In house engine <br>
+
+                                <u>Focus: </u><br>
+                            <div class="tag-container">
+                                <span class="tag-pill">Particles</span>
+                                <span class="tag-pill">Movement (minor)</span>
+                                <span class="tag-pill">Tools/Utilities</span>
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+
                     <p>contributions</p>
                     <p>*i ported my particle system from P3 and added more funcionality</p>
-                    <p>*i created tools for creating new particle systems</p>
                     <p>*i worked on the movement to make the player walk along the walls instead of getting stuck</p>
                     </p>
                 </div>
+                <h2>Rendering & Alpha</h2>
+                <hr>
+                <div class="project-container">
+                    <div class="project-nobg">
+                        <p> I worked a lot on things that weren't <br> visible—literally. We had issues with alpha
+                            rendering: when
+                            using fake shadows, background objects were cut off regardless of whether they were in front
+                            of or
+                            behind the alpha object.<br><br>
+
+                            This was related to render order. To fix it, I attempted to sort all game objects based on
+                            their
+                            distance from the camera. This gave a somewhat decent result, except that the sorting
+                            sometimes
+                            failed and the issue reappeared in certain cases.
+                        </p>
+                    </div>
+                    <div class="project-image">
+                        <img src="Resources/buggyAlpha.png" alt="broken alpha rendering" class="responsive-image">
+                    </div>
+                </div>
+                <p>
+
+                    It also hurt performance, since sorting was done
+                    every frame for all objects, making Debug mode unplayable.
+
+                    <br><br>
+
+                    I solved this by implementing a crude view culling system that treated all objects as equally sized
+                    squares on the screen. This meant the square size had to be larger than the largest object, even for
+                    smaller models. Despite that, we gained 15 FPS (from 10 to 25) in Debug, which made it worthwhile.
+                    I ultimately solved alpha rendering by letting our game artist to tag all drop-shadows/lights and
+                    rendering them last in TGE. This made my sorting solution completely unnecessary, so it was removed.
+                    <br><br>
+                </p>
+
+
+                <h2>Particle System</h2>
+                <hr>
+                <div class="project-container">
+                    <div class="project-nobg">
+                        <p>
+                            Adapting the system from my previous project to be able to load particle systems from JSON
+                            turned out to be a significant waste
+                            of time, as no one felt they had time to implement particle
+                            systems. <br><br> As a result, I was mostly the one creating and adjusting them. The JSON
+                            loading
+                            also added extra work. It was faster and easier to hardcode the particle system settings
+                            directly in the source files, which also overrode the JSON settings.
+                        </p>
+                    </div>
+                    <!-- <div class="project-image">
+                        <img src="Resources/buggyAlpha.png" alt="broken alpha rendering" class="responsive-image">
+                    </div> -->
+                </div>
+                <p>
+                    Despite this, I'm happy with the result. I learned how to use and handle JSON loading, which I
+                    hadn't done before. Writing the documentation for my particle system also helped me discover bugs in
+                    my code, which I was then able to fix.
+                </p>
             </section>
     </main>
 
