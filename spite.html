@@ -135,18 +135,48 @@
                 <hr>
                 <p>
                     I created all functionalities for the boss such as combat stages, attacks, inverse kinematics for
-                    looking at the player, implementing decals and water rising.
+                    looking at the player and attacks, implementing decals and water rising.
+                </p>
+                <h3>
+                    Inverse Kinematics
+                </h3>
+                <p>
+                    One problem we had was that the the bossfight would allow the player to run around in a large arena
+                    meanwhile the boss would be stagnent and not reposition. This problem left us with a some options
+                    <br><br>
+
+                    We could have animated one attack and simply rotate the boss twoards it's target. However this is
+                    quite
+                    hard to make good looking and would give a bit of a lazy feel to the boss. <br><br>
+
+
+                    
+
+                    Then I got the idea of manipulating the mesh to move where I wanted it to be. <br><br>
+                    I began testing in my directX11 renderer to figure out how to make it possible. I ended up adding
+                    some helper functions in my math library to be able to move 3D transformation matricies in and out
+                    of local and global spaces, most important was ParentAndKeepWorldRelative. <br><br> My plan was to
+                    hijack the
+                    animation system and move the mesh skeleton joints after the animation component was done and then
+                    write the new joint transformations into the animation buffer. <br><br>
+
+                <h4>
+                    In simpler terms: <br>
+                </h4>
+                <div class="project-image">
+
+                    1. Animate mesh normaly. <br> <br>
+                    2. Read the skeleton and the relevant joints before render and re-parent them <br> <br>
+                    3. Calculate the new joint positions. <br><br>
+                    4. Write back the joint transforms to the animation buffer.
+                </div>
+
                 </p>
                 <div class="project-container">
                     <div class="project-nobg">
-                        <h3>
-                            Inverse Kinematics
-                        </h3>
                         <p>
-                            I implemented a basic inverse kinematics system for the boss to be able to look at the
-                            player.
-                            It was a simple and tailored solution that worked well. <br><br> It added a nice touch of
-                            immersion and made the boss feel more dynamic. <br><br>
+                            The inverse kinematics made the boss feel more dynamic and enabled some more cool effects.
+                            <br><br>
 
                         </p>
                     </div>
@@ -158,6 +188,26 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
+                    </div>
+                </div>
+                <div class="project-container">
+                    <div class="project-nobg">
+                        <p>
+                            Inverse kinematics are also used in the bosses attacks enableing it to attack multiple areas
+
+
+
+                        </p>
+                    </div>
+                    <div class="project-image">
+                        <div class="video-container">
+                            <video width="100%" height="auto" controls>
+                                <source src="Resources/BigBossInverseKinematics.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        missing video
+
                     </div>
                 </div>
             </section>
