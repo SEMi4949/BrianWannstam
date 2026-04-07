@@ -73,7 +73,7 @@
                     <hr>
                     <p>
                         At the beginning of the project, I worked together with <a href="https://linusrodhammar.com/"
-                            style="color: green;">Linus Rodhammar</a> to create a State
+                            style="color: green;" target="_blank">Linus Rodhammar</a> to create a State
                         Machine that was used throughout the rest of the project. Because of this, we collaborated
                         closely with our animators to build a system that had functionality for everything they wanted
                         to use.
@@ -149,16 +149,29 @@
                     quite
                     hard to make good looking and would give a bit of a lazy feel to the boss. <br><br>
 
-
-                    
-
                     Then I got the idea of manipulating the mesh to move where I wanted it to be. <br><br>
-                    I began testing in my directX11 renderer to figure out how to make it possible. I ended up adding
-                    some helper functions in my math library to be able to move 3D transformation matricies in and out
-                    of local and global spaces, most important was ParentAndKeepWorldRelative. <br><br> My plan was to
-                    hijack the
-                    animation system and move the mesh skeleton joints after the animation component was done and then
-                    write the new joint transformations into the animation buffer. <br><br>
+                <h4>
+                    Testing my plan
+                </h4>
+                <div class="project-container">
+                    <div class="project-nobg">
+                        <p>
+                            I began testing in my directX11 renderer to figure out how to make it possible. I ended up
+                            adding
+                            some helper functions in my math library to be able to move 3D transformation matricies in
+                            and out
+                            of local and global spaces, most important was ParentAndKeepWorldRelative. <br><br>
+                        </p>
+                    </div>
+                    <div class="project-image">
+                        <img src="Resources/testingInverseKinematics.gif" alt="Inverse Kinematics Testing video"
+                            class="responsive-image">
+                    </div>
+                </div> <br>
+
+
+                My plan was to hijack the animation system and move the mesh skeleton joints after the animation
+                component was done and then write the new joint transformations into the animation buffer. <br><br>
 
                 <h4>
                     In simpler terms: <br>
@@ -166,17 +179,17 @@
                 <div class="project-image">
 
                     1. Animate mesh normaly. <br> <br>
-                    2. Read the skeleton and the relevant joints before render and re-parent them <br> <br>
+                    2. Read the skeleton and the relevant joints and re-parent them <br> <br>
                     3. Calculate the new joint positions. <br><br>
                     4. Write back the joint transforms to the animation buffer.
-                </div>
+                </div> <br> <br>
 
                 </p>
                 <div class="project-container">
                     <div class="project-nobg">
                         <p>
-                            The inverse kinematics made the boss feel more dynamic and enabled some more cool effects.
-                            <br><br>
+                            Add some duration and the inverse kinematics make the boss feel way more
+                            dynamic.<br><br>
 
                         </p>
                     </div>
@@ -194,6 +207,7 @@
                     <div class="project-nobg">
                         <p>
                             Inverse kinematics are also used in the bosses attacks enableing it to attack multiple areas
+                            with the same animation.
 
 
 
