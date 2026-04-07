@@ -67,7 +67,7 @@
                                 <br><br>
                                 After spending some time trying to understand how our rendering worked and
                                 attempting to build a particle system, another programmer solved the rendering, and we
-                                then collaborated to get the particles rendering correctly.
+                                then collaborated to get the particles rendered correctly.
                             </p>
                         </div>
                         <div class="project-image">
@@ -81,12 +81,11 @@
                         </div>
                         <div class="project-nobg">
                             <p>
-                                Once rendering started working, I continued to iteratively develop the particle system
-                                throughout almost the entire project, adding functionality based on the needs and
-                                requests of other disciplines. <br><br> I was also responsible for creating all particle
-                                textures
-                                according to our artists requirements. Additionally, I implemented all particle
-                                systems in all game object that required particles. <br><br>
+                                Once rendering started working, I continued to iteratively develop the particle system 
+                                throughout almost the entire project, adding functionality based on the needs and 
+                                requests from other disciplines. <br><br> I was also responsible for creating all particle textures 
+                                according to our artists' requirements. Additionally, I implemented all particle 
+                                systems in all game objects that require particles. <br><br> 
                             </p>
                         </div>
                     </div>
@@ -123,9 +122,6 @@
                     </div>
 
 
-
-
-
                     <h2>PNG → DDS</h2>
                     <hr>
                     <p>
@@ -139,15 +135,11 @@
                         <span class="code-containter">find . -type f</span><br><br>
                         searches for files starting from the current directory<br><br>
 
-
                         <span class="code-containter">-name "*.png"</span><br><br>
                         finds all files ending with .png <br><br>
 
-
-
                         <span class="code-containter">-exec sh -c 'convert "$0" "${0%.png}.dds"' {} \;</span> <br><br>
                         runs `convert` on all PNGs and outputs, for example, `example.dds`<br><br>
-
 
                         This helped us convert 300+ PNGs to DDS in a matter of seconds saving us alot of time from
                         manualy converting all images.

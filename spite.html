@@ -111,9 +111,9 @@
                     <div class="project-container">
                         <div class="project-nobg">
                             <p>I created a debug tool for animations and states using ImGui, It has been a very useful
-                                tool to find bugs and narrowing down from where animation errors come from. <br><br> It
+                                tool to find bugs and narrow down from where animation errors come from. <br><br> It
                                 allows me
-                                to force push conditions and animations to test transitions and blending in a controled
+                                to force push conditions and animations to test transitions and blending in a controlled
                                 environment.</p>
                         </div>
                         <div class="project-image">
@@ -122,12 +122,12 @@
                         </div>
                     </div>
                     <p>
-                        I learned that building tools requires not only good communication but also sitting down
-                        with the user to understand what needs to be changed in order to fix issues. I modified a
-                        debugging tool after observing problems while watching a user interact with it. <br><br>
-                        In the first draft of the debugger you had to type everything exactly right or else nothing
-                        would work, which made it very frustrating to use. This was resolved by converting all options
-                        into buttons, making it much easier to use.
+                        I learned that building tools requires not only good communication but also sitting down with
+                        the user understanding what needs to be changed to fix issues. I modified a debugging tool after
+                        observing problems while watching a user interact with it. <br><br> In the first draft of the
+                        debugger, you had to type everything exactly right or else nothing would work, which made it
+                        very frustrating to use. This was resolved by converting all options into buttons, making it
+                        much easier to use.
                     </p>
                 </div>
 
@@ -141,13 +141,12 @@
                     Inverse Kinematics
                 </h3>
                 <p>
-                    One problem we had was that the the bossfight would allow the player to run around in a large arena
-                    meanwhile the boss would be stagnent and not reposition. This problem left us with a some options
+                    One problem we had was that the boss fight would allow the player to run around in a large arena,
+                    meanwhile the boss would be stagnant and not reposition. This problem left us with some options
                     <br><br>
 
-                    We could have animated one attack and simply rotate the boss twoards it's target. However this is
-                    quite
-                    hard to make good looking and would give a bit of a lazy feel to the boss. <br><br>
+                    We could have animated one attack and simply rotate the boss towards its target. However, this is
+                    quite hard to make good looks and would give a bit of a lazy feeling to the boss. <br><br>
 
                     Then I got the idea of manipulating the mesh to move where I wanted it to be. <br><br>
                 <h4>
@@ -156,11 +155,10 @@
                 <div class="project-container">
                     <div class="project-nobg">
                         <p>
-                            I began by testing in my directX11 renderer to figure out how to make it possible. I ended up
-                            adding
-                            some helper functions in my math library to be able to move 3D transformation matricies in
-                            and out
-                            of local and global spaces, most important was ParentAndKeepWorldRelative. <br><br>
+                            I began testing in my directX11 renderer to figure out how to make it possible. I ended up
+                            adding some helper functions in my math library to be able to move 3D transformation
+                            matrices in and out of local and global spaces, most important was
+                            ParentAndKeepWorldRelative. <br><br>
                         </p>
                     </div>
                     <div class="project-image">
@@ -180,10 +178,10 @@
                 </h4>
                 <div class="project-image">
 
-                    1. Animate mesh normaly. <br> <br>
+                    1. Animate mesh normally. <br> <br>
                     2. Read the skeleton and the relevant joints and re-parent them <br> <br>
                     3. Calculate the new joint positions. <br><br>
-                    4. Write back the joint transforms to the animation buffer.
+                    4. Write back the joint transforms into the animation buffer.
                 </div> <br><br>
 
                 </p>
@@ -205,12 +203,13 @@
                             </video>
                         </div>
                     </div>
-                </div> <br><hr><br>
+                </div> <br>
+                <hr><br>
                 <div class="project-container">
                     <div class="project-nobg">
                         <p>
-                            Inverse kinematics are also used in the bosses attacks enableing it to attack multiple areas
-                            with the same animation.
+                            Inverse kinematics are also used in the boss's attacks enabling it to attack multiple areas 
+                            with the same animation. 
                         </p>
                     </div>
                     <div class="project-image">
@@ -221,11 +220,13 @@
                             </video>
                         </div>
                     </div>
-                </div> <br><hr><br>
+                </div> <br>
+                <hr><br>
                 <div class="project-container">
                     <div class="project-nobg">
                         <p>
-                            I made shure to dissable the inverse kinematics during the bosses death animation as well as some attacks to make sure it didn't look weird. 
+                            I made sure to disable the inverse kinematics during the boss's death animation as well as 
+                            some attacks to make sure it didn't look weird. 
                         </p>
                     </div>
                     <div class="project-image">
