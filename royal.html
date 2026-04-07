@@ -34,16 +34,17 @@
                     <br>
                     <div class="project-container">
                         <div class="project-nobg">
-                            <p>
-                                DESC
-                            </p>
+                            <i>
+                                "As a food delivering princess, jump through the enchanted forest, outsmart the stubborn
+                                knight and complete your deliveries before you're dragged back to the castle."
+                            </i>
                         </div>
                         <div class="project-image">
                             <h3>Quick info</h3>
                             <hr>
                             <p>
                                 <u>Engine: </u><br>
-                                In house engine <br>
+                                TGE (School provided Engine)<br>
 
                                 <u>Focus: </u><br>
                             <div class="tag-container">
@@ -53,8 +54,6 @@
                             </p>
                         </div>
                     </div>
-
-
 
                     <h2>Particles</h2>
                     <hr>
@@ -66,32 +65,65 @@
                                 which was intended only for testing and quickly gathering metrics. This task was later
                                 delegated to another programmer who took over player movement and the collision systems.
                                 <br><br>
-
-
                                 After spending some time trying to understand how our rendering worked and
                                 attempting to build a particle system, another programmer solved the rendering, and we
                                 then collaborated to get the particles rendering correctly.
                             </p>
                         </div>
                         <div class="project-image">
-                            <img src="Resources/particlesP3.png" alt="Albedo Pass" class="responsive-image">
-                            <i>Will update to gif</i>
+                            <img src="Resources/particlesP3.gif" alt="Albedo Pass" class="responsive-image">
                         </div>
                     </div>
-                    <p>
-                        Once rendering started working, I continued to iteratively develop the particle system
-                        throughout almost the entire project, adding functionality based on the needs and
-                        requests of other disciplines. I was also responsible for creating all particle textures
-                        according to our artists requirements. Additionally, I implemented all particle
-                        systems in all game object that required particles. <br><br>
 
-                        Svante and I also put our heads together to implement animated particles, which can be
-                        seen on the leaves in the first level. <br><br>
+                    <div class="project-container">
+                        <div class="project-image">
+                            <img src="Resources/particlesSmashP3.gif" alt="Albedo Pass" class="responsive-image">
+                        </div>
+                        <div class="project-nobg">
+                            <p>
+                                Once rendering started working, I continued to iteratively develop the particle system
+                                throughout almost the entire project, adding functionality based on the needs and
+                                requests of other disciplines. <br><br> I was also responsible for creating all particle
+                                textures
+                                according to our artists requirements. Additionally, I implemented all particle
+                                systems in all game object that required particles. <br><br>
+                            </p>
+                        </div>
+                    </div>
 
-                        We received feedback that it was difficult to tell whether bosses were vulnerable or
-                        not, and when or if they were taking damage. I solved this by making the boss flash in
-                        different colors at different stages.
-                    </p>
+
+
+                    <div class="project-container">
+                        <div class="project-nobg">
+                            <p>
+                                We received feedback that it was difficult to tell whether bosses were vulnerable or
+                                not, and when or if they were taking damage. I solved this by making the boss flash in
+                                different colors at different stages.
+                            </p>
+                        </div>
+                        <div class="project-image">
+                            <img src="Resources/particlesBossP3.gif" alt="Albedo Pass" class="responsive-image">
+                        </div>
+                    </div>
+
+
+
+                    <div class="project-container">
+                        <div class="project-image">
+                            <img src="Resources/particlesLeavesP3.gif" alt="Albedo Pass" class="responsive-image">
+                        </div>
+                        <div class="project-nobg">
+                            <p>
+                                <a href="https://svantejakobsson.com/" class="email-link" target="_blank">Svante
+                                    Jakobsson</a>
+                                and I also put our heads together to implement animated particles, which can be
+                                seen on the leaves in the first level. <br><br>
+                            </p>
+                        </div>
+                    </div>
+
+
+
 
 
                     <h2>PNG → DDS</h2>
@@ -101,8 +133,8 @@
                         <br><br>
 
                         <span class="code-containter">find . -type f -name "*.png" -exec sh -c 'convert "$0"
-                            "${0%.png}.dds"' {} \;</span><br><br> 
-                            Explaination: <br><br>
+                            "${0%.png}.dds"' {} \;</span><br><br>
+                        Explaination: <br><br>
 
                         <span class="code-containter">find . -type f</span><br><br>
                         searches for files starting from the current directory<br><br>
@@ -117,7 +149,8 @@
                         runs `convert` on all PNGs and outputs, for example, `example.dds`<br><br>
 
 
-                        This helped us convert 300+ PNGs to DDS in a matter of seconds saving us alot of time from manualy converting all images. 
+                        This helped us convert 300+ PNGs to DDS in a matter of seconds saving us alot of time from
+                        manualy converting all images.
                     </p>
             </section>
         </div>
