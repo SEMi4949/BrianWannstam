@@ -49,8 +49,9 @@
 
                     <h2>Setup</h2>
                     <hr>
-                    <p>My development environment was consisted of two computers for testing my program. I mainly
-                        developed the engine on Machine 1 and tested compatability on Machine 2.</p>
+                    <p>My development environment consisted of two computers for testing my program. I mainly 
+
+                        developed the engine on Machine 1 and tested compatibility on Machine 2. </p>
 
                     <!-- Specs -->
                     <div class="foldable">
@@ -123,11 +124,19 @@
 
 
                     <p>
-                        I had very litle problems setting up all the tool and dependencies
-                        and could begin implementing my engine early. I followed a guide
-                        on how to setup and render with vulkan. The guide was at first
-                        quite decent and easy to follow along to and I was seing good
-                        proggress.
+ 
+
+                        I had very little problems setting up all the tool and dependencies 
+
+                        and could begin implementing my engine early. I followed a guide 
+
+                        on how to setup and render with Vulkan. The guide was at first 
+
+                        quite decent and easy to follow along to and I was seeing good 
+
+                        Progress. 
+
+ 
                     </p>
 
                     <div class="project-container">
@@ -138,21 +147,25 @@
                         </div>
                         <div class="project-nobg">
                             <p>
-                                I kept following the tutorial and eventualy got a cube to render and eventualy one of my
-                                own models. Add some fake directional lighting and it's starting to look good. <br><br>
-                                I keep following the guide and added frames in flight and made it possible to have more
-                                than one model at once. <br><br> Once i got to adding textures the guide started to have
-                                more and more errors and the guide did not align with their provided refrence code.
+                                I kept following the tutorial and eventually got a cube to render and eventually one of
+                                my own models. Add some fake directional lighting and it's starting to look good.
+                                <br><br>
+
+                                I added frames in flight and made it possible to have more
+                                than one model at once. <br><br>
+
+                                Once i got to adding textures, the guide started to have more errors, and the guide did
+                                not align with their provided reference code.
+
                             </p>
                         </div>
                     </div>
                     <p>
-                        I keept following the tutorial to get textures added simply to get a hang of how to manage
-                        textures.
+                        The structure that the guide was giving me was not scalable, and there was no sign of 
 
-                        The structure that the guide was giving me was not scalable and there was no sign of it getting
-                        any better. I tried adding support for meshes with multpile materials, it was then I decided to
-                        abandon the guide completely due not having a section dedicated to it.<br><br>
+                        it is getting better. I tried adding support for meshes with multiple materials; it was then I 
+
+                        decided to abandon the guide completely due to not having a section dedicated to it.<br><br> 
                     </p>
 
                     <h2>Testing the engine</h2>
@@ -160,11 +173,15 @@
                     <div class="project-container">
                         <div class="project-nobg">
                             <p>
-                                I tested my program on mainly 2 completely different computers, one fitted with a 4060
-                                and intel processor running windows 10 only.<br><br> The other computer is fitted with a
-                                AMD GPU and AMD CPU with dual boot for both Linux and windows 10. <br><br> I developed
-                                the engine on the windows computer and pushed to git afterwards and tested the program
-                                on the linux computer.
+                                I tested my program on mainly 2 completely different computers; one fitted with a 4060 
+
+                                and intel processor running windows 10 only.<br><br> The other computer is fitted with a 
+
+                                AMD GPU and AMD CPU with dual boot for both Linux and windows 10. <br><br> I developed 
+
+                                the engine on the windows computer and pushed to git afterwards and tested the program 
+
+                                on the Linux computer. 
                             </p>
                         </div>
                         <div class="project-image">
@@ -172,26 +189,38 @@
                         </div>
                     </div>
                     <p>
-                        The testing mostly fine independent on the OS. Sadly it was not as sooth when testing cross GPU
-                        vendor. Thanks to developing on a NVidia GPU I had created functionalities that only worked on
-                        NVidia GPUs. The NVidia drivers also "helped" to mouch by letting the program run with errors
-                        while not giving any logs or indication that things were wrong. <br><br> The way the engine
-                        swithes textures worked fine on NVidia but completely broke on AMD and moving my camera around
-                        crashed on AMD due to it actualy listening to my commands unlike NVidia that gave me a false
-                        impression that everything worked as it should. It did not, I was locking buffers and then
-                        writing to them wich was fine on NVidia that somehow let me ignore my lock. On AMD the program
-                        would realize that it was writing to locked data and simply null it and throw warnings and
-                        errors.
+                        The testing is mostly fine, independent of the operating system. Sadly, it was not as smooth when testing cross GPU 
+
+                        vendor. Thanks to developing on a NVidia GPU, I had created functionalities that only worked on 
+
+                        NVidia GPUs. The NVidia drivers also "helped" too much by letting the program run with errors 
+
+                        while not giving any logs or indication that things were wrong. <br><br> The way the engine 
+
+                        switches textures worked fine on NVidia but completely broke on AMD and moving my camera around 
+
+                        crashed on AMD due to it listening to my commands unlike NVidia that gave me false 
+
+                        impression that everything worked as it should have. It did not, I was locking buffers and then 
+
+                        writing to them which was fine on NVidia that somehow let me ignore my lock. On AMD the program 
+
+                        would realize that it was writing to locked data and simply null it and throw warnings and 
+
+                        errors. 
                     </p>
                     <h2>Debuging the engine</h2>
                     <hr>
                     <div class="project-container">
                         <div class="project-nobg">
                             <p>
-                                Thanks to having built the engine with a GPU that gave no errors I had plenty of small
-                                and large buggs that I needed to fix. It also did not help that my main graphics debug
-                                tool RenderDoc broke due to the errors, when taking a capture of the program all the
-                                textures are nulled when stepping through frame events even though it reports.
+                                Thanks to having built the engine with a GPU that gave no errors I had plenty of small 
+
+                                and large bugs that I needed to fix. It also did not help that my main graphics debug 
+
+                                tool RenderDoc broke due to the errors, when taking a capture of the program all the 
+
+                                textures are nulled when stepping through frame events, even though it reports. 
 
 
                             </p>
@@ -201,9 +230,13 @@
                         </div>
                     </div>
                     <p>
-                        This lead to a rahter interesting development cycle I would see what needed fixing by
-                        trying to compile and launch my engine on linux and the fixing the errors on the windows
-                        computer.
+ 
+
+                     This led to a rather interesting development cycle I would see what needed fixing by 
+
+                        trying to compile and launch my engine on Linux and the fixing the errors on the windows 
+
+                        computer. 
                     </p>
                 </div>
 
@@ -215,31 +248,43 @@
                     </div>
                     <div class="project-nobg">
                         <p>
-                            Ahh the almost 1GB ASCII FBX model that has tested my engine's limits by being so
-                            unimaginably
-                            borken that it gets it's own chapter. <br><br> It comes as a FBX format that blender can't
-                            read that breaks the normals when converted with the official ASCII converter. <br> It's
-                            missing vertex tangents wich are reqired for PBL calculations.
+                            Ahh the almost 1GB ASCII FBX model that has tested my engine's limits by being so 
+
+                            unimaginably 
+
+                            broken that it gets its own chapter. <br><br> It comes as a FBX format that blender can't 
+
+                            read that breaks the normals when converted with the official ASCII converter. <br> It's 
+
+                            missing vertex tangents which are required for PBL calculations. 
                         </p>
                     </div>
                 </div>
                 <p>
-                    This model has made me make changes to so many parts of the engine to simply load it correctly with
-                    all of it's normals and textures intact together with its 28 materials and 401 elements. <br><br> In
-                    short this model is perfection if you are makeing a engine that is relient and durable.
+                    This model has made me make changes to so many parts of the engine to simply load it correctly with 
+
+                    all of its normals and textures intact together with its 28 materials and 401 elements. <br><br> In 
+
+                    short, this model is perfect if you are making an engine that is reliant and durable. 
                 </p>
                 <h2>PBL</h2>
                 <hr>
                 <div class="project-container">
                     <div class="project-nobg">
                         <p>
-                            Adding PBL would have been a lot simpler if I would have used a model that had all of it's
-                            values exported. The sponza model that I use (proivided by intel) is missing tangents wich
-                            is
-                            crucial for the shader functions. <br><br> I had a lot of trouble when importing the sponza
-                            model due to it missing tangent I have had to try and generate tangents from normal and UVs
-                            <br><br>
-                            I have done PBL before and I intend to reuse the shaders to speed up the process.
+                            Adding PBL would have been a lot simpler if I would have used a model that had all of it's 
+
+                            values exported. The sponza model that I use (provided by intel) is missing tangents which 
+
+                            is 
+
+                            crucial for the shader functions. <br><br> I had a lot of trouble when importing the sponza 
+
+                            model due to it missing tangent I have had to try and generate tangents from normal and UVs 
+
+                            <br><br> 
+
+                            I have done PBL before, and I intend to reuse the shaders to speed up the process. 
                         </p>
                     </div>
                     <div class="project-image">
@@ -251,17 +296,27 @@
                 <hr>
                 <div class="project-nobg">
                     <p>
-                        The debugging process was so slow that I had to find a way to speed it up. I ended up
-                        treading the loading of the model and textures to be able to quickly test changes to the
-                        engine without having to all the textures. <br><br>
+                        The debugging process was so slow that I had to find a way to speed it up. I ended up 
 
-                        loadingtime went from 55+ seconds (even higher in debug) down to 7.5 seconds, which is a huge
-                        improvement when testing. <br><br>
+                        treading the loading of the model and textures to be able to quickly test changes to the 
 
-                        It is completely thread safe and does not cause any issues, but it is a bit of a hacky.
-                        I intend to rework the loading system in the future to be more
-                        robust and better structured but for now this is a good enough solution to be able to test
-                        my engine without waiting for 1 minute every time I want to test a change.
+                        engine without having to all the textures. <br><br> 
+
+ 
+
+                        loading time went from 55+ seconds (even higher in debug) down to 7.5 seconds, which is a huge 
+
+                        improvement when testing. <br><br> 
+
+ 
+
+                        It is completely thread safe and does not cause any issues, but it is a bit of a hacky. 
+
+                        I intend to rework the loading system in the future to be more 
+
+                        robust and better structured but for now this is a good enough solution to be able to test 
+
+                        my engine without waiting for 1 minute every time I want to test a change. 
                     </p>
                 </div>
                 </p>
@@ -270,11 +325,17 @@
                 <div class="project-container">
                     <div class="project-nobg">
                         <p>
-                            I learned a lot! <br>Building this engine has tought me about multi platform inconsistencies
-                            between GPU vendors and how to write OS interchangeable code. <br><br> The engine currently
-                            needs reworked somewhat to be in a more usefull state but it still has a decent foundation
-                            to start building a game. <br><br> If I would do something different it would be to chose a
-                            different GPU to do my main development on to be able to catch buggs in an early stage.
+ 
+
+                            I learned a lot! <br>Building this engine has thought me about multi-platform inconsistencies 
+
+                            between GPU vendors and how to write OS interchangeable code. <br><br> The engine currently 
+
+                            needs reworked somewhat to be in a more useful state, but it still has a decent foundation 
+
+                            to start building a game. <br><br> If I would do something different it would be to choose a 
+
+                            different GPU to do my main development on to be able to catch bugs at an early stage. 
                         </p>
                     </div>
                     <div class="project-image">
@@ -282,12 +343,17 @@
                     </div>
                 </div>
                 <p>
-                    Working on different GPUs that behave differently has by far been one of the more challanging things
-                    that I have done in this project. However my hard work payed of and I now have a multi-platform
-                    graphics engine that I can keep building upon in the future. <br><br>
+                    Working on different GPUs that behave differently has by far been one of the more challenging things 
 
-                    I have yet to add shadows and some more PBL still needs to be added despite that I view this as a
-                    success!
+                    that I have done in this project. However, my hard work paid off, and I now have a multi-platform 
+
+                    graphics engine that I can keep building upon in the future. <br><br> 
+
+ 
+
+                    I have yet to add shadows and some more PBL still needs to be added despite that I view this as a 
+
+                    success! 
                 </p>
         </div>
         </div>
